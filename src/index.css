@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main {
+  @apply h-screen;
+}
+
+.tour {
+  @apply card shadow !text-neutral-800 !p-12;
+}
