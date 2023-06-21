@@ -1,4 +1,4 @@
-import { memo, useCallback, useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { useOpenAi } from "../../openai/use-openai";
 import { useChat } from "../context";
 
