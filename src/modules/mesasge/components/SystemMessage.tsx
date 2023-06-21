@@ -1,4 +1,4 @@
-import { memo, useCallback, useState } from "react";
+import { memo, useCallback, useEffect, useState } from "react";
 import { useOpenAi } from "../../openai/use-openai";
 import { useChat } from "../context";
 
@@ -29,11 +29,14 @@ function SystemMessage({ prompt }: SystemMessageProps) {
       setIsLoading(false);
     },
   });
-
-  const onClickRegenerate = useCallback(() => {
-    setResponseText("");
+  useEffect(() => {
     mutate(prompt);
   }, []);
+
+  const onClickRegenerate = () => {
+    setResponseText("");
+    mutate(prompt);
+  };
 
   const onClickTryAgain = () => {
     mutate(prompt);
