@@ -1,6 +1,6 @@
-import { memo, startTransition, useCallback, useEffect, useState } from "react";
-import { useChat } from "../context";
+import { memo, useCallback, useState } from "react";
 import { useOpenAi } from "../../openai/use-openai";
+import { useChat } from "../context";
 
 interface SystemMessageProps {
   prompt: string;
